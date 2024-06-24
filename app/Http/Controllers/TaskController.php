@@ -11,7 +11,7 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::all();
-        return view('tasks.Layouts.app',compact('tasks'));
+        return view('tasks.index',compact('tasks'));
     }
 
     /**
@@ -63,6 +63,7 @@ class TaskController extends Controller
             'title'=>$request->input('title'),
             'description'=>$request->input('description')
         ]);
+        return redirect('/');
     }
 
     /**

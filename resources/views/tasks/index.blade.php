@@ -31,7 +31,7 @@
                     Description
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Price
+                    Status
                 </th>
                 <th scope="col" class="px-6 py-3">
                     <span class="sr-only">Edit</span>
@@ -42,13 +42,13 @@
         @foreach ($tasks as $task)
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                   {{uhuyggyhu}}
+                   {{$task->title}}
                 </th>
                 <td class="px-6 py-4">
-                    Silver
+                    {{$task->description}}
                 </td>
                 <td class="px-6 py-4">
-                    $2999
+                    {{$task->status}}
                 </td>
                 <td class="px-6 py-4 text-right">
                     <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

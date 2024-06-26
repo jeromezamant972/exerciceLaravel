@@ -67,7 +67,7 @@
                 </td>
                 <td class="px-6 py-4 text-right">
 
-                    <button href="{{$task->id}}" class="font-medium mb-5 rounded-full text-sm  px-7 py-2.5 text-white bg-blue-500 hover:bg-blue-700 hover:underline">modifier</button>
+                    <a href="{{ route('tasks.update', $task->id) }}" class="font-medium mb-5 rounded-full text-sm  px-7 py-2.5 text-white bg-blue-500 hover:bg-blue-700 hover:underline">modifier</a>
                     {{-- mettre la methode destroy avec ces arguments $task->id --}}
                     <form action="{{ route('supprimer', $task->id) }}" method="POST">
                         @csrf

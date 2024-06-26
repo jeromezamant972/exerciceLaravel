@@ -69,7 +69,7 @@
 
                     <button href="{{$task->id}}" class="font-medium mb-5 rounded-full text-sm  px-7 py-2.5 text-white bg-blue-500 hover:bg-blue-700 hover:underline">modifier</button>
                     {{-- mettre la methode destroy avec ces arguments $task->id --}}
-                    <form action='{{route('/supprimer', $task->id)}}' method="POST">
+                    <form action="{{ route('supprimer', $task->id) }}" method="POST">
                         @csrf
                         <button  class="text-white bg-red-400 hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-200 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-red-500">Delete</button>
                     </form>

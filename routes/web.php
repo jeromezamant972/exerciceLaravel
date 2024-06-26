@@ -21,10 +21,11 @@ Route::middleware('auth')->group(function () {
 });
     Route::post('/ajouter', [TaskController::class,'store'])->name('ajouter');
     // mettre route::post('/supprimer/{id}',[controler::class,'method'])
-    Route::post('/supprimer/{id}', [TaskController::class,'destroy'])->name('supprimer');
-    Route::get('/update', [TaskController::class,'update'])->name('update');
+    Route::post('/supprimer ,{id}', [TaskController::class,'destroy'])->name('supprimer');
+    Route::get('/update', [TaskController::class,'update'])->name('tasks.edit');
     // mettre la route du dashboard avec sa methode , rajouter le middleware et aprés lle / mettre le name
     Route::get('/dashboard',[TaskController::class,'dashboardTache'])->middleware(['auth', 'verified'])->name('dashboard');
+
 
 
 require __DIR__.'/auth.php';
